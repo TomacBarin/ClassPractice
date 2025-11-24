@@ -27,6 +27,22 @@ const person3 = new Person(
     {role: "lärare", country: "Sweden"}
 );
 
-console.log(person1.getFullName())
-console.log(person2.getFullName())
-console.log(`Vilken roll har Rippe? Well, han är en ${person3.meta.role}.`)
+// Logga getInfo() till console.log
+
+const allPeople = [person1, person2, person3];
+
+// Printa i DOM:en
+const output = document.querySelector("#output")
+
+let text = "=== PERSONREGISTER ===\n\n";
+
+for (const p of allPeople) {
+    text += p.getFullName() + "\n";
+    text += p.getInfo() + "\n";
+    text += `Hobbies: ${p.hobbies.join(", ")}\n`;
+    text += `Myndig: ${p.isAdult() ? "Ja" : "Nej"}\n\n`;
+}
+
+
+
+output.textContent = text;

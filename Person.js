@@ -1,5 +1,3 @@
-// Person.js
-
 export class Person {
     constructor(firstName, lastName, age, isActive = true, hobbies = [], meta = {}) {
         this.firstName = firstName;
@@ -25,4 +23,10 @@ export class Person {
     toggleActive() {
         this.isActive = !this.isActive;
     }
+
+    //Överkurs: Myndighetskontroll
+    isAdult() {
+        return this.age >= 18;
+    }
+
 }
