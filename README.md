@@ -1,2 +1,3 @@
-# ClassPractice
-Practicing Variables, Classes and ES-modules
+# Personregister (övning)
+
+Detta är en inlämningsuppgift: "Variabler klasser och ES-moduler".
